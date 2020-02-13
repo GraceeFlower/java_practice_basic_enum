@@ -6,7 +6,7 @@ public class Application {
 
   public static void filterFemale() {
       for (Student i: Student.values()) {
-          if (i.filterSex(i.getSex())) {
+          if (i.filterGender(i.getGender())) {
               System.out.println(i.getName());
           }
       }

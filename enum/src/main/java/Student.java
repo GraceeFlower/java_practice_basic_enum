@@ -6,15 +6,15 @@ public enum Student {
     CINDY("Cindy", "Female");
 
     private String name;
-    private String sex;
+    private String gender;
 
-    Student(String name, String sex) {
+    Student(String name, String gender) {
         this.name = name;
-        this.sex = sex;
+        this.gender = gender;
     }
 
-    public boolean filterSex(String sex) {
-        return (sex.equals("Female"));
+    public boolean filterGender(String gender) {
+        return (gender.equals("Female"));
     }
 
     public String getName() {
@@ -25,11 +25,11 @@ public enum Student {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
