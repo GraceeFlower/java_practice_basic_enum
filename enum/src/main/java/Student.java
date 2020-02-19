@@ -1,35 +1,19 @@
-public enum Student {
+public class Student {
 
-    LINDA("Linda", "Female"),
-    BOB("Bob", "Male"),
-    SOLIDER("Solider", "Male"),
-    CINDY("Cindy", "Female");
+    private final String name;
+    private final Gender gender;
 
-    private String name;
-    private String gender;
-
-    Student(String name, String gender) {
+    public Student(String name, Gender gender) {
         this.name = name;
         this.gender = gender;
-    }
-
-    public boolean filterGender(String gender) {
-        return (gender.equals("Female"));
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 }

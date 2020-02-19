@@ -1,13 +1,17 @@
+import java.util.ArrayList;
+
 public class Application {
 
   public static void main(String[] args) {
-      filterFemale();
-  }
+      ArrayList<Student> stuList = new ArrayList<>();
+      stuList.add(new Student("Linda", Gender.FEMALE));
+      stuList.add(new Student("Bob", Gender.MALE));
+      stuList.add(new Student("Solider", Gender.MALE));
+      stuList.add(new Student("Cindy", Gender.FEMALE));
 
-  public static void filterFemale() {
-      for (Student i: Student.values()) {
-          if (i.filterGender(i.getGender())) {
-              System.out.println(i.getName());
+      for (Student stu: stuList) {
+          if (Gender.FEMALE.filterGender(stu)) {
+              System.out.println(stu.getName());
           }
       }
   }
