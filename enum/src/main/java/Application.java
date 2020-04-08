@@ -9,10 +9,13 @@ public class Application {
       stuList.add(new Student("Solider", Gender.MALE));
       stuList.add(new Student("Cindy", Gender.FEMALE));
 
-      for (Student stu: stuList) {
-          if (Gender.FEMALE.filterGender(stu)) {
-              System.out.println(stu.getName());
-          }
-      }
+//      for (Student stu: stuList) {
+//          if (Gender.FEMALE.filterGender(stu)) {
+//              System.out.println(stu.getName());
+//          }
+//      }
+      stuList.stream().filter(Gender.FEMALE::filterGender)
+          .map(Student::getName)
+          .forEach(System.out::println);
   }
 }
